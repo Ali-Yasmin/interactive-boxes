@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  transition: max-height 0.4s ease, box-shadow 0.3s;
+  overflow: hidden;
+  max-height: 60px;
+  cursor: pointer;
+}
+
+.box-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.box-content {
+  margin-top: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box.expanded {
+  max-height: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box.expanded .box-content {
+  display: flex;
+}
+
+select {
+  margin-left: 10px;
+}
